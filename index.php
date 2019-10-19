@@ -59,8 +59,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
 					
                     <li> <a href="index.php"><i class="fa fa-dashboard fa-3x"></i> Home</a></li>
                     <li> <a href="index.php?halaman=coba"><i class="fa fa-dashboard fa-3x"></i> Coba</a></li>
-                    <li> <a href="index.php?halaman=produk"><i class="fa fa-dashboard fa-3x"></i> Produk</a></li>
-                    <li> <a href="index.php?halaman=pembelian"><i class="fa fa-dashboard fa-3x"></i> Pembelian</a></li>
                     <li> <a href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> Pelanggan</a></li>
                     <li> <a href="index.php?halaman=logout"><i class="fa fa-dashboard fa-3x"></i> Logout</a></li>
                      
@@ -79,14 +77,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                     {
                         include 'coba.php';
                     }
-                    else if($_GET['halaman']=="produk")
-                    {
-                        include 'produk.php';
-                    }
-                    else if($_GET['halaman']=="pembelian")
-                    {
-                        include 'pembelian.php';
-                    }
                     else if($_GET['halaman']=="pelanggan")
                     {
                         include 'pelanggan.php';
@@ -94,22 +84,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                     else if($_GET['halaman']=="logout")
                     {
                         include 'logout.php';
-                    }
-                    else if($_GET ['halaman']=="detail")
-                    {
-                        include 'detail.php';
-                    }
-                    else if($_GET ['halaman']=="tambahproduk")
-                    {
-                        include 'tambahproduk.php';
-                    }
-                    else if($_GET ['halaman']=="hapusproduk")
-                    {
-                        include 'hapusproduk.php';
-                    }
-                    else if($_GET ['halaman']=="ubahproduk")
-                    {
-                        include 'ubahproduk.php';
                     }
                     else if ($_GET['halaman']=="logout")
                     {
