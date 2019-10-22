@@ -46,7 +46,7 @@ if(!isset($_SESSION['admin']))
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Tanggal : xx xx xxxx &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> <?php echo "Tanggal : " . date("d/m/Y");?> &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -58,7 +58,7 @@ font-size: 16px;"> Tanggal : xx xx xxxx &nbsp; <a href="logout.php" class="btn b
 				
 					
                     <li> <a href="index.php"><i class="fa fa-home fa-3x"></i> Home</a></li>
-                    <li> <a href="index.php?halaman=coba"><i class="fa fa-send fa-3x"></i> Kirim Pesan</a></li>
+                    <li> <a href="index.php?halaman=coba"><i class="fa fa-send fa-2x"></i> Kirim Pesan</a></li>
                     <li> <a href="index.php?halaman=pelanggan"><i class="fa fa-user fa-3x"></i> Pelanggan</a></li>
                     <li> <a href="index.php?halaman=histori"><i class="fa fa-clock-o fa-3x"></i> Histori</a></li>
                     <li> <a href="index.php?halaman=logout"><i class="fa fa-power-off fa-3x"></i> Logout</a></li>

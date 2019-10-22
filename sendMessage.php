@@ -16,15 +16,19 @@ function sendMessage($telegram_id, $message_text, $secret_token) {
     $result = curl_exec($ch);
     curl_close($ch);
 }
+
+
 /*----------------------
 only basic POST method :
 -----------------------*/
+date_default_timezone_set("Asia/Jakarta");
 $koneksi = new mysqli("localhost","root","","kpcoba");
 $chat_id_pelanggan = $_POST ['chat_id_pelanggan'];
 $pesan = $_POST ['pesan'];
+$waktu = date("y/m/d H:i:s");
 $koneksi->query("INSERT INTO chat_histori 
-        (chat_id_pelanggan,pesan_histori)
-        VALUES('$chat_id_pelanggan','$pesan')");
+        (chat_id_pelanggan,pesan_histori,waktu_histori)
+        VALUES('$chat_id_pelanggan','$pesan','$waktu')");
 /*--------------------------------
 Isi TOKEN dibawah ini: 
 --------------------------------*/
@@ -33,4 +37,3 @@ sendMessage($chat_id_pelanggan, $pesan, $secret_token);
 
 echo "<script>alert('Pesan berhasil terkirim!'); window.location.href = 'index.php?halaman=coba';</script>";
 ?>
-

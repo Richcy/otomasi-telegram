@@ -7,6 +7,7 @@
 			<th>histori chat</th>
 			<th>username</th>
 			<th>chat ID</th>
+			<th>waktu histori</th>
 			<th>aksi</th>
 		</tr>
 	</thead>
@@ -19,6 +20,7 @@
 			<td><?php echo $pecah['pesan_histori']; ?></td>
 			<td><?php echo $pecah['username_pelanggan']; ?></td>
 			<td><?php echo $pecah['chat_id_pelanggan'];?></td>
+			<td><?php echo $pecah['waktu_histori']; ?></td>
 			<td>
 				<a href="" class = "btn btn-danger">hapus</a>
 			</td>

@@ -18,11 +18,16 @@
                 <input type="text" class="form-control" name="pesan" placeholder="Pesan Anda">
               </div>
           </div>
+          
             <button type="submit" class="btn btn-primary">Send <i class="fa fa-send"></i></button>
       </form>
     </div>
   </div>
 </div>
 
+<script type="text/javascript">
+
+    setTimeout(sendMessage,3000);
+</script>
 
 
