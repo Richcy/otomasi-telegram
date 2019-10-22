@@ -3,6 +3,7 @@
 Simple PHP script for Sending Telegram Bot Message
 ~ Iky | https://www.wadagizig.com
 ------------------------------------------------------ */
+
 function sendMessage($telegram_id, $message_text, $secret_token) {
     $url = "https://api.telegram.org/bot" . $secret_token . "/sendMessage?parse_mode=markdown&chat_id=" . $telegram_id;
     $url = $url . "&text=" . urlencode($message_text);
@@ -18,13 +19,18 @@ function sendMessage($telegram_id, $message_text, $secret_token) {
 /*----------------------
 only basic POST method :
 -----------------------*/
-$telegram_id = $_POST ['telegram_id'];
-$message_text = $_POST ['message_text'];
+$koneksi = new mysqli("localhost","root","","kpcoba");
+$chat_id_pelanggan = $_POST ['chat_id_pelanggan'];
+$pesan = $_POST ['pesan'];
+$koneksi->query("INSERT INTO chat_histori 
+        (chat_id_pelanggan,pesan_histori)
+        VALUES('$chat_id_pelanggan','$pesan')");
 /*--------------------------------
 Isi TOKEN dibawah ini: 
 --------------------------------*/
 $secret_token = "858796733:AAEFyqkSc9Dw5vgOweKrmFzkSD4VppfFnzI";
-sendMessage($telegram_id, $message_text, $secret_token);
-echo "<script>alert('Pesan berhasil terkirim!'); window.location.href = './coba.php';</script>";
+sendMessage($chat_id_pelanggan, $pesan, $secret_token);
+
+echo "<script>alert('Pesan berhasil terkirim!'); window.location.href = 'index.php?halaman=coba';</script>";
 ?>
 
